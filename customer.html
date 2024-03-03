@@ -1,0 +1,30 @@
+
+
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+    </head><tr>
+    <th>customer Name</th>
+    <th>age</th>
+    <th>phone</th>
+    <th>location</th>
+    <th>created_at</th>
+</tr>
+</head>
+<body>
+  <div>
+    <tbody>
+        {customers.map((customer) => (
+          <tr key={customers.sno}>
+            <td>{customers.customer_name}</td>
+            <td>{customers.age}</td>
+            <td>{customers.phone}</td>
+            <td>{customers.location}</td>
+            <td>{new Date(customers.created_at).toLocaleDateString()}</td>
+            <td>{new Date(customers.created_at).toLocaleTimeString()}</td>
+          </tr>
+        ))}
+      </tbody>
+  </div>
+</body>
+</html>
